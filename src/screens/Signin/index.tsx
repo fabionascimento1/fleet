@@ -5,7 +5,7 @@ import { styles } from "./styles";
 export function Signin() {
   return (
     <View style={styles.container}>
-      <Text>Signin</Text>
+      <Text>Signin2</Text>
       <StatusBar style="auto" />
     </View>
   );
