@@ -1,6 +1,7 @@
 import { Signin } from "./src/screens/Signin";
 import { ThemeProvider } from "styled-components";
 import { AppProvider, UserProvider } from "@realm/react";
+import { RealmProvider } from "./src/libs/realm";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import {
   useFonts,
@@ -30,7 +31,9 @@ export default function App() {
             translucent
           />
           <UserProvider fallback={Signin}>
-            <Routes />
+            <RealmProvider>
+              <Routes />
+            </RealmProvider>
           </UserProvider>
         </SafeAreaProvider>
       </ThemeProvider>
